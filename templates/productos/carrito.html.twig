@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('carrito') }}
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="compras">
+            <div class="sub-header">
+                <h2 class="boton-carrito">Carrito</h2>
+                <a class="boton-volver boton-carrito" href="{{path('app_productos')}}">
+                    <i class="bi bi-arrow-return-left"></i> Comprar Mas
+                </a>
+            </div>
+            <div class="contenedor-carrito">
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío.<i class="bi bi-emoji-frown"></i></p>
+                <div id="carrito-productos" class="carrito-productos disabled">
+                </div>
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p>
+                        </div>
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                    </div>
+                </div>
+                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block footer %}
+    <footer class="black">
+        <div class="nombre-empresa">
+            <span>LITTLE PETS</span>
+            <p>SHOP</p>
+        </div>
+        <div class="redes-sociales">
+            <div class="redes-iconos">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-youtube"></i>
+            </div>
+            <div class="contactos">
+                <dl>
+                    <span>NOSOTROS</span>
+                    <li>
+                        EMPRESA
+                    </li>
+                    <li>
+                        PUNTOS DE VENTA
+                    </li>
+                    <li>
+                        AFILIDADOS
+                    </li>
+                </dl>
+                <dl>
+                    <span>¿NECESITAS AYUDA?</span>
+                    <li>
+                        CONTACTANOS
+                    </li>
+                    <li>
+                        TICKET ELECTRONICO
+                    </li>
+                    <li>
+                        AYUDA AL CLIENTE
+                    </li>
+                </dl>
+            </div>
+        </div>
+        <div class="copiryght">
+            <p class="texto-footer">© 2023 LITTLE PETS</p>
+        </div>
+    </footer>
+{% endblock %}

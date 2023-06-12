@@ -1,0 +1,42 @@
+[
+    {
+        "id": "ComidaPerro-01",
+        "titulo": "Comida Perro CACHORRO",
+        "imagen": "images/productos/producto1.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abrigo-02",
+        "titulo": "Comida Perro ADULTO",
+        "imagen": "images/productos/producto1.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abrigo-03",
+        "titulo": "Comida Perro CACHORRO PREMIUM",
+        "imagen": "images/productos/producto1.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 2000
+    },
+    {
+        "id": "abrigo-04",
+        "titulo": "Comida Perro ADULTO PREMIUM",
+        "imagen": "images/productos/producto1.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 2000
+    }
+]

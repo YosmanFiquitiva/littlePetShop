@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('main') }}
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="main-descripcion">
+            <div class="descripcion-page">
+                <div class="descripcion-text">
+                    <h1 class="descripcion-text-tittle">DESCRIPCION</h1>
+                    <p class="descripcion-text-subtittle"> En nuestra tienda online, nos apasiona brindarles a tus adorables compañeros peludos todo lo que necesitan para vivir una vida feliz y saludable. Nos enorgullece ofrecerte una amplia gama de productos de alta calidad, seleccionados especialmente para satisfacer las necesidades de tus mascotas y mejorar su bienestar.</p>
+                </div>
+            </div>
+            <div class="descripcion-img">
+                <img src="{{asset('images/perros/Perrito.png')}}" alt="perro-header">
+            </div>
+        </div>
+        <div class="productos">
+            <h2 class="titulo-principal" id="titulo-principal">PRODUCTOS MAS VENDIDOS</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+            </div>
+        </div>
+        <div class="vision-descripcion">
+            <div class="vision-img">
+                <img src="{{asset('images/perros/perro2.webp')}}" alt="perro-header">
+            </div>
+            <div class="vision-page">
+                <div class="descripcion-text">
+                    <h2 class="descripcion-text-subtittle"> proporcionar a los dueños de mascotas una experiencia de compra excepcional y brindarles productos de alta calidad que satisfagan las necesidades y mejoren la vida de sus adorables compañeros peludos.</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

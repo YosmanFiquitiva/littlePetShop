@@ -2,15 +2,83 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}LITTLE PETS SHOP{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('main') }}
         {% endblock %}
     </head>
     <body>
+        {% block header %}
+            <header class="header">
+                <div class="navegation">
+                    <h1 class="logo">LITTLE PETS</h1>
+                    <div class="botones-header">
+                        <a id="todos" href="{{path('app_productos')}}" class="boton-menu boton-categoria">Inicio</a>
+                        <a class="boton-menu boton-categoria">Productos</a>
+                        <a class="boton-menu boton-categoria" href="{{path('app_carrito')}}">
+                            <i class="bi bi-cart-fill"></i>
+                            <span id="numerito" class="numerito">0</span>
+                        </a>
+                        <a class="boton-menu boton-categoria" href="#">
+                            <span class="login">Log-In</span>
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        {% endblock %}
         {% block body %}{% endblock %}
+        {% block footer %}
+            <footer class="light">
+                <div class="nombre-empresa">
+                    <span>LITTLE PETS</span>
+                    <p>SHOP</p>
+                </div>
+                <div class="redes-sociales">
+                    <div class="redes-iconos">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-whatsapp"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-linkedin"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                    <div class="contactos">
+                        <dl>
+                            <span>NOSOTROS</span>
+                            <li>
+                                EMPRESA
+                            </li>
+                            <li>
+                                PUNTOS DE VENTA
+                            </li>
+                            <li>
+                                AFILIDADOS
+                            </li>
+                        </dl>
+                        <dl>
+                            <span>¿NECESITAS AYUDA?</span>
+                            <li>
+                                CONTACTANOS
+                            </li>
+                            <li>
+                                TICKET ELECTRONICO
+                            </li>
+                            <li>
+                                AYUDA AL CLIENTE
+                            </li>
+                        </dl>
+                    </div>
+                </div>
+                <div class="copiryght">
+                    <p class="texto-footer">© 2023 LITTLE PETS</p>
+                </div>
+            </footer>
+        {% endblock %}
     </body>
 </html>
